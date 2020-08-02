@@ -3,6 +3,7 @@
 import os
 import glob
 import time
+import rrdtool
 
 # Activate the GPIO and therm modules (Not sure if this is required)
 os.system('modprobe w1-gpio')
@@ -20,7 +21,7 @@ def read_temp_raw():
     f.close()
     return lines
 
-# Define a funtion to intepret the raw data and output temperature in Celcius
+# Define a function to intepret the raw data and output temperature in Celcius
 def read_temp():
     lines = read_temp_raw()
     while lines[0].strip()[-3:] != 'YES':
@@ -35,5 +36,6 @@ def read_temp():
 # Loop every 1 second, reading and printing the temperature to the stdout (the screen)
 while True:
 	temp_c=read_temp()
-	print(temp_c)
-	time.sleep(1)
+	value="N:" + str(temp_c)
+	rrdtool.update("tempdb.rrd", value)
+	time.sleep(300)
