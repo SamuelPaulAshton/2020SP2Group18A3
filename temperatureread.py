@@ -33,9 +33,16 @@ def read_temp():
         temp_c = float(temp_string) / 1000.0
         return temp_c
 
-# Loop every 1 second, reading and printing the temperature to the stdout (the screen)
+# Loop every 5 minutes, reading the temperature and writing to the database, additionaly update the graphs
+
 while True:
 	temp_c=read_temp()
 	value="N:" + str(temp_c)
 	rrdtool.update("tempdb.rrd", value)
+	rrdtool.graph("last2hours.png", "--start", "-2h", "DEF:Temperature=tempdb.rrd:temp:AVERAGE","LINE1:Temperature#FF0000:Temperature",
+                 "-v","Degrees Celcius", "-t", "Last 2 Hours")
+	rrdtool.graph("last24hours.png", "--start", "-24h", "DEF:Temperature=tempdb.rrd:temp:AVERAGE","LINE1:Temperature#FF0000:Temperature",
+                 "-v","Degrees Celcius", "-t", "Last 24 Hours")
+	rrdtool.graph("lastweek.png", "--start", "-1w", "DEF:Temperature=tempdb.rrd:temp:AVERAGE","LINE1:Temperature#FF0000:Temperature",
+                 "-v","Degrees Celcius", "-t", "Last Week")
 	time.sleep(300)
