@@ -1,52 +1,59 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>Information</title>
     <link rel="stylesheet" type="text/css" href="information.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="TopBar">
-      <p class="pad">&nbsp;</p>
-      <p class="pad">&nbsp;</p>
-      <div id="inline">
-        <h1 class="heading">Mom & Pop Aquaponics</h1>
-        <div class="f-right">
+    <div class="GridContainer">
+      <header id="item1">
+        <h1>Mom & Pop Aquaponics</h1>
+      </header>
+      <div class="topnav" id="item2">
+        <p>
           Welcome William
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <u>Settings</u>
+          <a href="">Settings</a>
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <u>Logout</u>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="">Logout</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+      </div>
+      <nav id="item3">
+        <div id="AddLocation">
+          <button type="button" id="btnAddLocation"><b>Add A Location</b></button>
         </div>
-      </div>
-    </div>
-    <div class="SideBar">
-      <div id="add">
-        <button type="button">Add a location</button>
-      </div>
-      <div id="LocationBox">
-        <div class="location">
-          Location #1
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #1
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #2
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #3
-          <br />
-          <br />
-          Location #2
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #1
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #2
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #3
-          <br />
-          <br />
-          Location #3
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #1
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #2
-          &nbsp;&nbsp;&nbsp;&nbsp;Tank #3
-        </div>
-      </div>
-    </div>
-    <main>
-      <div id="graphs">
-          <div id="time">
+        <div id="location">
+            <div class="area">
+              Location #1
+              <div class="tank">
+                <a href="">Tank #1</a>
+              </div>
+              <div class="tank">
+                <a href="">Tank #2</a>
+              </div>
+              <div class="tank">
+                <a href="">Tank #3</a>
+              </div>
+            </div>
+            <div class="area">
+              Location #2
+              <div class="tank">
+                <a href="">Tank #1</a>
+              </div>
+              <div class="tank">
+                <a href="">Tank #2</a>
+              </div>
+              <div class="tank">
+                <a href="">Tank #3</a>
+              </div>
+            </div>
+          </div>
+      </nav>
+      <main id="item4">
+        <div id="menubar">
+          <div id="timebar">
             <button type="button">5 Minutes</button>
             <button type="button">30 Minutes</button>
             <button type="button">1 Hour</button>
@@ -56,22 +63,15 @@
             <button type="button">3 Days</button>
             <button type="button">7 Days</button>
           </div>
-          <div class="data">
-            <img src="24hrs.png" />
+          <div id="warningtitle">
+            <h2>Warnings</h2>
           </div>
-          <div class="data">
-            <img src="24hrs.png" />
+          <div id="descriptiontitle">
+            <h2>Description</h2>
           </div>
-          <div class="data">
-            <img src="24hrs.png" />
-          </div>
-      </div>
-      <div id="warnings">
-        <h2>Warnings</h2>
-      </div>
-      <div id="description">
-        <h2>Description</h2>
-      </div>
-    </main>
+        </div>
+      </main>
+      <footer id="item5">Footer</footer>
+    </div>
   </body>
 </html>
