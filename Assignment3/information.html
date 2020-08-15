@@ -4,6 +4,50 @@
     <title>Information</title>
     <link rel="stylesheet" type="text/css" href="information.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      window.onload = function () {
+
+      var dps = []; // dataPoints
+      var chart = new CanvasJS.Chart("chartContainer", {
+        title :{
+          text: "Water Temperature"
+        },
+        data: [{
+          type: "line",
+          dataPoints: dps
+        }]
+      });
+
+      var xVal = 15;
+      var yVal = 30; 
+      var updateInterval = 10000;
+      var dataLength = 20; // number of dataPoints visible at any point
+
+      var updateChart = function (count) {
+
+        count = count || 1;
+
+        for (var j = 0; j < count; j++) {
+          yVal = Math.round(5 + Math.random() *(-10-5));
+          dps.push({
+            x: xVal,
+            y: yVal
+          });
+          xVal++;
+        }
+
+        if (dps.length > dataLength) {
+          dps.shift();
+        }
+
+        chart.render();
+      };
+
+      updateChart(dataLength);
+      setInterval(function(){updateChart()}, updateInterval);
+
+      }
+    </script>
   </head>
   <body>
     <div class="GridContainer">
@@ -54,6 +98,7 @@
       <main id="item4">
         <div id="menubar">
           <div id="timebar">
+            <div id="graphs">
             <button type="button">5 Minutes</button>
             <button type="button">30 Minutes</button>
             <button type="button">1 Hour</button>
@@ -62,6 +107,9 @@
             <button type="button">24 Hours</button>
             <button type="button">3 Days</button>
             <button type="button">7 Days</button>
+            <div id="chartContainer"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+            </div>
           </div>
           <div id="warningtitle">
             <h2>Warnings</h2>
@@ -71,7 +119,7 @@
           </div>
         </div>
       </main>
-      <footer id="item5">Footer</footer>
+      <footer id="item5"><b>Team 18 - Creative Protocol&#169 2020</b></footer>
     </div>
   </body>
 </html>
