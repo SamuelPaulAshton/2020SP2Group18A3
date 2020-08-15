@@ -33,6 +33,11 @@ body {
   height: auto;
 }
 
+#item4 {
+  width:auto;
+  grid-column: 2/6;
+}
+
 #AddLocation {
   margin-top:0px;
   margin-left:20px;
@@ -82,8 +87,9 @@ body {
   margin-left:10px;
   margin-right:10px;
   float:left;
-  align-content:inline;
+  align-content:block;
   display:flex;
+  width:98.5%;
 }
 
 #menubar h2 {
@@ -94,7 +100,7 @@ body {
   background-color:#CFEEF5;
   padding-left:10px;
   padding-right:10px;
-  width:auto;
+  width:55%;
   display:flex;
   align-content:center;
   margin-left:10px;
@@ -102,10 +108,15 @@ body {
 }
 
 #timebar button {
+  width:auto;
   margin-top:10px;
   margin-bottom:10px;
   margin-left:2px;
   margin-right:2px;
+}
+
+#graphs {
+  width:100%;
 }
 
 #warningtitle {
@@ -113,7 +124,6 @@ body {
   padding-left:10px;
   padding-right:10px;
   width:auto;
-  display:flex;
   margin-left:10px;
   margin-right:10px;
   flex-grow:1;
@@ -159,11 +169,21 @@ footer {
   grid-column: 1/1;
 }
 
-#item4 {
-  grid-column: 2/6;
-}
+
 
 #item5 {
   grid-column: 1/6;
 }
 
+#buttons {
+  position:fixed;
+}
+
+#chartContainer {
+  margin-top:10px;
+  margin-bottom:10px;
+  height: 370px; 
+  width:100%;
+  float:left;
+  clear:both;
+}
