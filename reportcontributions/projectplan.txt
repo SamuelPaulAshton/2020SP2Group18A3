@@ -1,0 +1,5 @@
+Overview 
+
+Our project is to build to develop an affordable, scalable aquaponics monitoring and automation solution for back yard hobbyists.  This product will delivered as a cloud platform, known as HAMS (Home Aquaponics Monitoring System), with the long term goal of native mobile to be integrated into the system.  It will involve client devices reporting back to a cloud service, allowing easy monitoring of environment variables and a customisable alerting system 
+
+Large scale automated systems exist for commercial aqua farming but the cost of these solutions make them unviable for the backyard farmer. Conversely, "do it yourself" style projects for monitoring and automating home aquariums also exist, typically using a Raspberry Pi or Arduino board and other consumer electronics to measure different environment factors and present this information on a web-based dashboard. We intend to expand on this idea, targeting environment variables that are core to combining aqua culture and hydroponics, either in a single back yard system or for multiple units on a larger property.  
