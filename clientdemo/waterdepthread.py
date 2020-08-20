@@ -1,6 +1,7 @@
 # Import Required Python libraries
 import RPi.GPIO as GPIO
 import time
+import rrdtool
 
 # GPIO configuration
 GPIO.setmode(GPIO.BCM)
@@ -50,7 +51,17 @@ def depth():
 try:
     while True:
 	waterDepth = depth()
-	print waterDepth
+#	print waterDepth
+	value="N:" + str(waterDepth)
+	rrdtool.update("depth.rrd", value)
+        rrdtool.graph("depthlast2hours.png", "--start", "-2h", "DEF:Depth=depth.rrd:depth:AVERAGE","LINE1:Depth#FF0000:Depth",
+                 "-v","Centimetres", "-t", "Last 2 Hours")
+        rrdtool.graph("depthlast24hours.png", "--start", "-24h", "DEF:Depth=depth.rrd:depth:AVERAGE","LINE1:Depth#FF0000:Depth",
+                "-v","Centimetres", "-t", "Last 24 Hours")
+        rrdtool.graph("depthlastweek.png", "--start", "-1w", "DEF:Depth=depth.rrd:depth:AVERAGE","LINE1:Depth#FF0000:Depth",
+                 "-v","Centimetres", "-t", "Last Week")
+
+
 	time.sleep(15)
 except KeyboardInterrupt:
 	print("Script Stopped")
