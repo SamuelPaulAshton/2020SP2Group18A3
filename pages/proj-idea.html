@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+    </head>
+    
+    <body>
+        <!-- Modified version of https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+        <section class="nav-bar">
+            <nav>
+                <ul class="nav-options">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">About Us
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="profile/team-prof.html">Team Profile</a>
+                                <a href="profile/indv-prof.html">Our Profiles</a>
+                                <a href="profile/jobs.html">Our Ideal Jobs</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="it-work/int-it.html">Interview With An IT Professional</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">IT Technologies
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="it-tech/auto-vehicle.html">Autonomous Vehicles</a>
+                                <a href="it-tech/blockchain.html">Blockchain and Cryptocurrencies</a>
+                                <a href="it-tech/cyb-sec.html">Cyber Security</a>
+                                <a href="it-tech/robot.html">Robotics</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="group-reflection.html">Group Reflection</a></li>
+                    <li class="nav-right"><a href="proj-idea.html">Project Idea</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- End of modified code -->
+        <div class="title">
+            <h2>Overview and Description</h2>
+        </div>
+        
+        <div class="box grey">
+            <h3>Overview</h3>
+            <p>Our project idea is to develop an affordable, scalable aquaponics monitoring and automation solution for back yard hobbyists. Large scale automated systems exist for commercial aqua farming but the cost of these solutions make them unviable for the backyard farmer.  Conversely, ‘do it yourself’ style projects for monitoring and automating home aquariums also exist, typically using a Raspberry Pi or Arduino board and other consumer electronics to measure different environment factors and present this information on web-based dashboard.  We intend to expand on this idea, targeting environment variables that are core to combining aqua culture and hydroponics, either in a single back yard system or for multiple units on a larger property. 
+            <br>
+            <br>
+            </p>
+            
+            
+            <h3>Motivation</h3>
+            <p>Two of the biggest issues in the world today are food security and climate change.  Both these issues are significantly related.  As land is cleared for farming, the balance of nature is upset.  Crops of plants absorb significantly less carbon dioxide from the atmosphere than the forests that preceded them.  Additionally, rainfall is effected by the clearing of forests, resulting in extended droughts in some areas.  Traditional plant farming requires lots of water, with additional chemicals used for various reasons, this water tends to run off into local river systems along with trace chemicals causing further issues. 
+                <br>
+                As our population increases more food is required, further increasing the need for farming and agriculture.  Aquaponics is a resource efficient method of growing food, requiring less water than traditional farming, and the symbiotic relationship between the plants and fish results in less chemical additions, such as is the case with separate hydroponics and aquaculture methods. 
+                <br>
+                We hope that this project will allow enthusiasts an easy way to understand what is going on with their backyard hobby aquaponics and maybe in time become a viable solution for more people to get into commercial aquaculture, further promoting sustainable farming methods.
+                <br>
+                <br>
+            </p>
+            
+            
+            <h3>Description</h3>
+            <p>For Proof of concept, a home-made flood and drain aquaponics system will be used as the 'test subject'. Diagram A show the basic concept of how this works.  Fish are grown in a fish tank, with their waste turning into ammonia as a by-product.  water is continually being pumped into the grow bed, which is typically above the fish tank, or at least higher.  The grow bed is filled with a hydroponics medium such as clay balls, which acts as a biological filter for the fish tank.  The ammonia in the water is converted to nitrites and then nitrates as in a typical fish tank filter, but rather than having to regularly change the water to remove the nitrates, the plants within  the grow bed absorb them as part of their natural growth.       
+                <br>
+                <br>
+                <img src="../img/proj/projidea.jpeg" width=300px style="float: right; margin-left: 2%">
+                The bell siphon ensures that once the water level in the grow bed reaches a pre-determined top level, it siphons the entire grow beds water bac into the fish tank.  This ensures that the plants roots are not continually submerged, preventing rot and damage.  How often the grow bed is drained is controlled by the flow of water into the grow bed. 
+                <br>
+                <br>
+                Due to the flood and drain nature of this system, majority of sensors will be in the fish tank.  As a proof of concept we will start with measuring temperature as this is cheap and easy to do.  Additional Information will require more expensive sensors or customised equipment but the general ideal of measuring values will be proven. This environment’s variables can then be transmitted wirelessly to a central server to be logged and presented to a user via a web based dashboard.   
+                <br>
+                <br>
+                The central server that logs the information and provides the web-based user interface will have its own logic built in with adjustable constraints.  This will allow the user to setup alerts for when things are going wrong.  Alerting can be setup using basic email alerts, but email alerts are not ideal. They are often lost within other email, picked up as spam or can flood an inbox altogether.  As a stretch goal to this project, or even as a future add on, a mobile app could be developed that communicated with the central server.  This is where this project could really stand out from other do it yourself solutions.  In fact, most of the intellectual property involved would be in the Servers ability to process the appropriate information rather than the hardware itself.  Additionally, an easy to use mobile app could in fact be turned into a viable product for commercial aquafarming, given enough consultation within the industry. </p>
+        </div>
+        
+        <div class="title grey">
+            <h2>What to Measure?</h2>
+        </div>
+        
+        <div class="box">
+            <h3>Water Temperature</h3>
+            <p>A consistent water temperature is paramount for the health of fish.  Increased growth rates is observed over the warmer months, though too hot a temperature (or too cold) can result in death. 
+            <br>
+            <br>
+            </p>
+            
+            
+            <h3>Water Levels</h3>
+            <p>Both Fish and Plants require water to grow, measuring the water levels will not only allow the flood and drain cycle to be timed and adjusted accordingly but would also indicate a pumping failure or excess loss of water. 
+            <br>
+            <br>
+            </p>
+            
+            
+            <h3>PH</h3>
+            <p>The acidity/alkalinity of the water is also very important to ensure it is in a consistent state, both fish an plants have different PH tolerances depending on the species.  Understanding the PH of the water will allow accurate decisions around what plants should be grown.  
+            <br>
+            <br>
+            </p>
+            
+            <h3>Nitrate/Nitrite</h3>
+            <p>If an aquaponics systems is working and properly balanced there should be little to no nitrate within the water of the fish tank.  If there is, then this would indicate that either the biological filtering of the grow bed is not working or there are not enough plants to absorb the nitrate.  Excessive nitrate within the fish tank water is detrimental to fish health and needs to be monitored.  Unfortunately this environment variable is one of the most difficult to measure electronically.  Some investigation will have to be done to determine whether this measurement is viable.  A stop gap solution is to measure this using a chemical test kit and entering the result into the system manually at regular interviews.  
+            <br>
+            <br>
+            </p>
+            
+            
+            <h3>Sunlight</h3>
+            <p>Measuring the amount of sunlight the aquaponics system receives will help in analysing growth during the different seasons.</p>
+        </div>
+        
+        <div class="title">
+            <h2>Hardware/Software Requirements</h2>
+        </div>
+        
+        <div class="box grey">
+            <p>The Hardware and/or Tools requirements can be broken up into client’s side and server side.  The client side defines the hardware/software required to measure the environment variables of an aquaponics system and can be replicated for additional systems. The server Side defines what is required by the central system that stores the log data and presents It via a dashboard.
+            <br>
+            <br>
+            </p>
+            
+            <h3>Client Side Requirements</h3>
+            <p>On the client side we require hardware that can either measure different variable or control devices to interact with each system. </p>
+            <ul class="link"><b><u>Phase 1:</u></b>
+                <li>A Raspberry Pi (A raspberry Pi Model B will be used as we have one available) </li>
+                <li>A Wifi Nano USB Adaptor (For communications)</li>
+                <li>Wireless connectivity to the internet and/or server (Wireless networking out of scope for this project)</li>
+                <li>A waterproof DS18B20 temperature probe such as <a href="https://www.altronics.com.au/p/z6386-stainless-steel-housing-waterproof-ds18b20-temperature-probe/">https://www.altronics.com.au/p/z6386-stainless-steel-housing-waterproof-ds18b20-temperature-probe/</a> </li>
+                <li>1 x 4.7k Resistor (As required by the DS18B20) </li>
+            </ul>
+            <br>
+            <ul class="link"><b><u>Phase 2:</u></b>
+                <li>A PH monitor such as this <a href="https://au.banggood.com/PH-Value-Data-Detection-and-Acquisition-Sensor-Module-Acidity-and-Alkalinity-Sensor-Monitoring-and-Control-p-1547652.html?gmcCountry=AU&currency=AUD&createTmp=1&utm_source=googleshopping&utm_medium=cpc_bgcs&utm_content=frank&utm_campaign=ssc-aug-all-1129&ad_id=400330096020&ID=532941&cur_warehouse=CN">PH Value Data Detection and Acquisition Sensor Module Acidity and Alkalinity Sensor Monitoring and Control - Type 1 </a></li>
+                <li>A Sunlight sensor such as this: <a href="https://thepihut.com/products/grove-sunlight-sensor">https://thepihut.com/products/grove-sunlight-sensor</a></li>
+                <li>A water level sensor – more research on the best method is required </li>
+            </ul>
+            <br>
+            <ul><b><u>Phase 3:</u></b>
+                <li>Ammonia / Nitrate Level measurements. <br>
+                    This is the most difficult and expensive and most likely out of scope for this subject but we could do some research and present some possible options.  I have read of people suggesting some form of robotic testing using chemical testing strips and then a camera reading the colour of the results. In the first instance, we could just have a way to input manual tests in order to track results </li>
+            </ul>
+            <br>
+            <h3>Server Side Requirements</h3>
+            <p>Currently much of the server side this project can already be done with a combination of readily available open source tools.  Reporting and monitoring tools such as Nagios exist which can be deployed to measure temperature from a source device.  The Nagios client can be installed on the Raspbian operating system, whilst the Nagios server can be installed on a number of Linux distributions.  Addons such as RRDGraph can then display this information.  As Nagios is a product more aimed at IT infrastructure we would be looking at developing our own unique solution.  The RRDGraph/RRDTool open source logging tool can be used for this purpose. See <a href="https://oss.oetiker.ch/rrdtool/">https://oss.oetiker.ch/rrdtool/</a></p>
+            <ul>
+                <li>A custom communications client and server, most likely written in C, though RRDTool does have some network communication options that could be explored </li>
+                <li>A database engine to store definitions of Aquaponics Systems and user credentials etc..  </li>
+                <li>Environment variables will stored in RRDTools native round robin database format.  </li>
+                <li>A web server such as Apache or Nginx to serve the web dashboard. </li>
+                <li>HTML, CSS, PHP and other web technologies to build the interface. </li>
+                <li>A Server side scripting language to generate graphs on demand using RRDTool.  </li>
+                <li>A mail server. </li>
+            </ul>
+        </div>
+        
+        <div class="title">
+            <h2>Skills Required</h2>
+        </div>
+        
+        <div class="box grey">
+            <p>Many of the skills required for this project are common among IT enthusiasts, though it is likely an experienced developer would be required to ensure reliability of the end product.  Networking skills in both local wireless networks and cloud server security would be required, not only to ensure connectivity but also to protect the project from unwanted intrusions or outages due to denial of service attacks and the like. Although setup of Raspberry Pi and Arduino style devices is fairly straight forward, this project would require some basic knowledge in electronic circuits, soldering and safety.  
+                <br>
+                <br>
+                If this project is successful, home aquaponics hobbyists and aspiring entrepreneurs will have a new tool making their life much easier and saving them time due to the lack of manual water quality testing required.  This will allow them more time to either spend on other ventures, or allow them to increase their output by adding more tanks and grow beds to their operation.  Additionally, making a sustainable farming method easier to understand and manage may get more people involved in an exciting way to progress our farming methods for a better future. </p>
+        </div>
+        <p class="title" style="margin-top: 15px; margin-bottom: 15px;"><b>Team 18 - Creative Protocol&#169 2020</b></p>    
+    </body>
+</html>
+
+<!-- Sources:
+    https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp

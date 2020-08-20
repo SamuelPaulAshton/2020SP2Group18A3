@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    </head>
+    
+    <body>
+        <!-- Modified version of https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+        <section class="nav-bar">
+            <nav>
+                <ul class="nav-options">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">About Us
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="team-prof.html">Team Profile</a>
+                                <a href="indv-prof.html">Our Profiles</a>
+                                <a href="jobs.html">Our Ideal Jobs</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../it-work/int-it.html">Interview With An IT Professional</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">IT Technologies
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="../it-tech/auto-vehicle.html">Autonomous Vehicles</a>
+                                <a href="../it-tech/blockchain.html">Blockchain and Cryptocurrencies</a>
+                                <a href="../it-tech/cyb-sec.html">Cyber Security</a>
+                                <a href="../it-tech/robot.html">Robotics</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="../group-reflection.html">Group Reflection</a></li>
+                    <li class="nav-right"><a href="../proj-idea.html">Project Idea</a></li>
+                </ul>
+            </nav>
+        </section>
+        <!-- End of modified code -->
+        <div class="title">
+            <h2>About Us</h2>
+        </div>
+        <main>
+            <div class="tab">
+                <button class="tablinks" onclick="OpenStudent(event, 'Samuel')" id="defaultOpen"><h3>Samuel Ashton</h3></button>
+
+                <button class="tablinks" onclick="OpenStudent(event, 'Shane')"><h3>Shane Bunting</h3></button>
+
+                <button class="tablinks" onclick="OpenStudent(event, 'Jessica')"><h3>Jessica Delgado</h3></button>
+
+                <button class="tablinks" onclick="OpenStudent(event, 'William')"><h3>William Ericson</h3></button>
+
+                <button class="tablinks" onclick="OpenStudent(event, 'Matthew')"><h3>Matthew McCracken</h3></button>
+
+                <button class="tablinks" onclick="OpenStudent(event, 'Cameron')"><h3>Cameron McLaughlan</h3></button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div id="Samuel" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/sam.jpg"></td>
+                        <td>
+                            <ul>
+                                <li><b>Student ID:</b> s3742249</li>
+                                <li><b>Student Email:</b> <a href="mailto:3864453@student.rmit.edu.au">s3742249@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link:</b><a href="https://samuelpaulashton.github.io/IIT/">https://samuelpaulashton.github.io/IIT/</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm Samuel Ashton (s3742249)
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    I am a Brisbane based IT professional, working in the industry for the last 17 years.  Having been interested in IT from an early age I have interacted with technology from the late 80's Starting with an MSX2 microcomputer, watching computing evolve through generations of advancement to today's world of cloud computing and online mobile devices in everyone's pockets.  Throughout my career I have performed roles in IT support, System Administration, Network Engineering and IT Management.  When not in front of a computer, I enjoy fishing with my two children, Japanese sports cars and collecting Phantom comics, even if I don’t get time to read them all! </p>
+            </div>
+            
+            <div id="Shane" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/shane.jpg"></td>
+                        <td>
+                            <ul>
+                                <li><b>Student ID: </b>s3407441</li>
+                                <li><b>Student Email: </b><a href="mailto:s3407441@student.rmit.edu.au">s3407441@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link: </b><a href="https://shanebunting.github.io/IIT/">https://shanebunting.github.io/IIT/</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm Shane Bunting (s3407441)
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    I am a 27 year old, Melbourne born Libra with my general interests being fitness, cars (Subaru all the way), computers, gaming, animation and security. Straight out of year 12 I went on to complete my certificate 4 in fitness and begin the journey into personal training. It was a weird time for PTs back then and from there I continued to upskill where possible and work on the side where ever I could. I obtained my pre app in electrical, but was unable to land a job due to being of mature age, basically it cost more to hire me.  I also attended university for Game Art and Animation, but financially living expenses where too much at the time, so I had to leave and gain full time employment. Moving forwards, this instead led me to many physical related jobs. This brings us to where I am now, I am on the hunt to pursue my hobbies and turn them into a career in something I am able to commit to long term, as my body has begun to give me signs that it's time to take it back a notch. When I was in year 10, about 15 years old, my parents took my brother and I out of school for a year and we travelled around Australia (Tasmania inc) and also the South island of New Zealand. It was a life changing experience that looking back on wasn’t as bad as 15 year old me made it out to be. </p>
+            </div>
+            
+            <div id="Jessica" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/jessica.jpg"></td>
+                        <td>
+                            <ul>
+                                <li><b>Student ID: </b>s3864357</li>
+                                <li><b>Student Email: </b><a href="mailto:s3864357@student.rmit.edu.au">s3864357@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link: </b><a href="https://jessicaprojects.github.io/SP2Demo2020/ ">https://jessicaprojects.github.io/SP2Demo2020/ </a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm Jessica Delgado (s3864357) 
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    I am a 28 year old transgender woman living in Sydney and I currently do IT support for eHealth NSW. I am an amateur musician and have learned how to learn play a new instrument every year since age 16. From the age of 18 I completed a Cert IV in Network Administration, Programming and a Diploma of Information Technology. From there I was able to secure employment in a helpdesk role, supporting the largest library of applications used by a single organisation in the southern hemisphere. I have been able to perform various roles within the same organization, moving to application support for the eMR (electronic medical records) systems used in hospitals. I now work as a senior support technician for eHealth. 
+                </p>
+            </div>
+            
+            <div id="William" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/william.jpg"></td>
+                        <!-- Image from: https://www.wallpaperflare.com/statue-of-david-art-florence-photo-italy-man-public-domain-wallpaper-wldsv -->
+                        <td>
+                            <ul>
+                                <li><b>Student ID: </b>s3866209</li>
+                                <li><b>Student Email: </b><a href="mailto:s3866209@student.rmit.edu.au">s3866209@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link: </b><a href="https://erics-willi.github.io/ITAssignment1/">https://erics-willi.github.io/ITAssignment1/</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm William Ericson (s3866209) 
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    For my hobbies, while I enjoy listening to music, I also used to make my own, I studied Music Performance and Technical Production, Yes, I have performed live, no, I will not show you the videos. Over the years, I have hoarded a fair bit of music, while the bulk of my collection is digital (it takes up less space), I also have a sizeable collection of CDs and cassette tapes (and a few records here and there). I've been interested in IT from a young age, it all started when one of my cousins showed me how to use Cheat Engine, while I had fun adding extra stuff to the games I played, I also enjoyed putting in random codes and seeing what it would do. Before joining RMIT, I studied Computing at Deakin College and then Computer Science at Deakin University, but it reached the point where rent was too expensive, so I had to leave.  </p>
+            </div>
+            
+            <div id="Matthew" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/matt.jpg"></td>
+                        <td>
+                            <ul>
+                                <li><b>Student ID: </b>s3864453</li>
+                                <li><b>Student Email:</b><a href="mailto:s3864453@student.rmit.edu.au">s3864453@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link: </b><a href="https://aussiematt84.github.io/IIT/">https://aussiematt84.github.io/IIT/</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm Matt McCracken (s3864453) 
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    I am a 35-year-old father of 2, who works full time for a hotel chain where I see to all their IT needs. I was born in Bundaberg, Queensland and, as a young boy, moved to Central West Queensland where I grew up. I currently live in Johannesburg, South Africa. I completed my school career at Barcaldine State School at the end of Grade 11, when I left to pursue a career in IT, as a trainee position opened up at the Department of Main Roads, this is also where I studied my Cert 2 in IT through Tafe. My personal interests are gaming, travel, golf, cricket, and rugby league. I have always had a keen interest in all things tech and like to keep up with what is happening in the world of Technology, both regarding hardware and software. I have always enjoyed understanding how things work, whether it was taking apart an old computer or looking at the source code of how a website was built. My experience in IT include 7 years at The Department of Main Roads following my initial traineeship in their IT department and 6 years as an IT Administrator for a Hotel chain. </p>
+            </div>
+            
+            <div id="Cameron" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+                <table class="nostyle2">
+                    <tr>
+                        <td width=150px><img src="../../img/profile/cam.png"></td>
+                        <td>
+                            <ul>
+                                <li><b>Student ID: </b>s3717363</li>
+                                <li><b>Student Email: </b><a href="mailto:s3717363@student.rmit.edu.au">s3717363@student.rmit.edu.au</a></li>
+                                <li><b>GitHub Link: </b><a href="https://cammclaughlan.github.io/IT-project-1/">https://cammclaughlan.github.io/IT-project-1/</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <h3>About Me</h3>
+                <p>Hi, I'm Cameron McLaughlan (s3717363) 
+                    <br>
+                    <br>
+                    Team: Creative Protocol 
+                    <br>
+                    <br>
+                    I am currently 20 years old and working in the Australian army as a rifleman. I currently reside in Townsville but am originally from Melbourne. I completed year 12 in 2017 and have decided that I need to continue my learning and learn about something I am passionate about. My favourite activity to do in my spare time is canoe slalom, which is a field of white-water kayaking. My interest in IT started from a young age I had a relative who worked at apple and always had the newest computers and phones, from that young age I was hooked with all things technology. This love continued as I got into high school and was able to study multimedia in my earlier years, then during my VCE, study software engineering, which is when I realised that I wanted to make some sort of career out of it.  My current career has lead me into signals and radios which has given me a different experience in networking and IP while also exposing me to how many different technologies and systems work and connect together to share data and information around the world securely and undetected. </p>
+            </div>
+            
+        </main>
+        <p class="title" style="margin-top: 15px; margin-bottom: 15px;"><b>Team 18 - Creative Protocol&#169 2020</b></p>    
+        <script>
+        function OpenStudent(evt, cityName) {
+            var i, tabcontent, tablinks;
+            
+            tabcontent = document.getElementsByClassName("tabcontent");
+            
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            
+            tablinks = document.getElementsByClassName("tablinks");
+            
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+    </body>
+</html>
