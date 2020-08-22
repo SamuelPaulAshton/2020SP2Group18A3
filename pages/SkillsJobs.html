@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>CP - Skills & Jobs</title>
+  </head>
+  <body>
+    <section class="nav-bar">
+      <nav>
+        <ul class="nav-options">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="TeamProfile.html">Team Profile</a></li>
+          <li><a href="Tools-Tech.html">Tools and Technologies</a></li>
+          <li><a href="SkillsJobs.html">Skills and Jobs</a></li>
+          <li><a href="">Group Reflection</a></li>
+          <li class="nav-right">
+            <div class="dropdown">
+              <button class="dropbtn">Project Items</button>
+              <div class="dropdown-content">
+                <a href="">Project Description</a>
+                <a href="">Project Dashboard</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <div class="title">
+      <h2>Skills and Jobs</h2>
+    </div>
+    <div class="box">
+      <p>Let us suppose that a group of venture capitalists hears about your project, and is so impressed that they wish to fund you to develop it further for say six months. You will be the manager of a team of 4 people to deliver the project outcomes. What position description would be appropriate? Write 4 position descriptions for people that you would employ to take your project to the next phase. You will need to consider what skills are appropriate, which may include specific technical expertise, team work experience, leadership and management techniques, and innovative thinking. </p>
+      <br />
+      <h3>Front End Web Developer</h3>
+      <p><!-- Insert text here, two <br /> between paragraphs (not after </p>) --></p>
+      <br />
+      <h3>Back End Application Developer</h3>
+      <p><!-- Insert text here, two <br /> between paragraphs (not after </p>) --></p>
+      <br />
+      <h3>Test Engineer</h3>
+      <p><!-- Insert text here, two <br /> between paragraphs (not after </p>) --></p>
+      <br />
+      <h3>Dev-Ops Engineer</h3>
+      <p><!-- Insert text here, two <br /> between paragraphs (not after </p>) --></p>
+    </div>
+    <div class="title">
+      <h2>Job Advertisements</h2>
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="OpenAd(event, 'Front')" id="defaultOpen"><h3>Front End Web Developer</h3></button>
+      <button class="tablinks" onclick="OpenAd(event, 'Back')"><h3>Back End Application Developer</h3></button>
+      <button class="tablinks" onclick="OpenAd(event, 'Test')"><h3>Test Engineer</h3></button>
+      <button class="tablinks" onclick="OpenAd(event, 'Dev')"><h3>Dev-Ops Engineer</h3></button>
+    </div>
+    <!-- Tab Content ->
+    <!-- For Front End -->
+    <div id="Front" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+      <h2></h2>
+      <p></p>
+      <br />
+      <h3>Skills Required</h3>
+      <ul>
+        <li></li>
+      </ul>
+      <br />
+      <h3>Qualifications Required</h3>
+      <p></p>
+    </div>
+    <!-- For Back End -->
+    <div id="Back" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+      <h2></h2>
+      <p></p>
+      <br />
+      <h3>Skills Required</h3>
+      <ul>
+        <li></li>
+      </ul>
+      <br />
+      <h3>Qualifications Required</h3>
+      <p></p>
+    </div>
+    <!-- For Testing Engineer -->
+    <div id="Test" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+      <h2></h2>
+      <p></p>
+      <br />
+      <h3>Skills Required</h3>
+      <ul>
+        <li></li>
+      </ul>
+      <br />
+      <h3>Qualifications Required</h3>
+      <p></p>
+    </div>
+    <!-- For Dev Ops -->
+    <div id="Dev" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright"></span>
+      <h2></h2>
+      <p></p>
+      <br />
+      <h3>Skills Required</h3>
+      <ul>
+        <li></li>
+      </ul>
+      <br />
+      <h3>Qualifications Required</h3>
+      <p></p>
+    </div>
+    <p class="title" style="margin-top: 15px; margin-bottom: 15px;"><b>Team 18 - Creative Protocol&#169 2020</b></p>
+    <script>
+      function OpenAd(evt, cityName) {
+        var i, tabcontent, tablinks;
+      
+        tabcontent = document.getElementsByClassName("tabcontent");
+            
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+            
+        tablinks = document.getElementsByClassName("tablinks");
+            
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+            
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
