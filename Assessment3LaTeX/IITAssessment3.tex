@@ -1,8 +1,12 @@
 \documentclass[11pt, oneside, a4paper, titlepage]{article}
 
 \usepackage{fancyhdr}
-\usepackage{graphicx}
+\usepackage{rotating, graphicx}
+\usepackage{lscape}
 \usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{wrapfig}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -11,6 +15,8 @@
 }
 
 \graphicspath{ {./img/} }
+
+\captionsetup[figure]{labelformat=empty}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -414,12 +420,24 @@ Currently the market for aquaponics monitoring systems has limited solutions for
 The monitoring system we are suggesting will provide an affordable solution for enthusiasts and small businesses who are wanting to start using aquaponics, with scalability for future expansion. Information is stored in the cloud which is accessible by the user anywhere they have an internet connection via a web browser. The addition cloud technology will allow for expansion into additional features, such as sending a notification of a temperature change to a mobile app. 
 
 \section{Detailed Description}
+\begin{wrapfigure}{l}{0.5\textwidth}
+	\includegraphics[width=1\linewidth]{DiagramA} 
+	\caption{Aquaponics Diagram}
+	\label{fig:drawing}
+\end{wrapfigure}
+
 For this project, a home-made flood and drain aquaponics system will be used as the 'test subject'. To properly describe the scope of the project, a brief background in Aquaponics is required. Diagram A show the basic concept of how this works.  
-% Insert photo here
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\includegraphics[width=0.9\linewidth]{DiagramB} 
+	\caption{Home Aquaponics Example}
+	\label{fig:Aquaponics}
+\end{wrapfigure}
+
 Fish are grown in a fish tank, with their waste turning into ammonia as a by-product.  Water is continually being pumped into the grow bed, which is typically above the fish tank, or at least higher. The grow bed is filled with a hydroponics medium such as clay balls, which acts as a biological filter for the fish tank. The ammonia in the water is converted to nitrites and then nitrates as in a typical fish tank filter, but rather than having to regularly change the water to remove the nitrates, the plants within the grow bed absorb them as part of their natural growth.  
 
 The bell siphon ensures that once the water level in the grow bed reaches a pre-determined top level, it siphons the entire grow beds water bac into the fish tank. This ensures that the plants roots are not continually submerged, preventing rot and damage. How often the grow bed is drained is controlled by the flow of water into the grow bed.  
-% Insert photo here
+
 \subsection{Environment Variables}
 In order to maintain a healthy aquaponics system and truly understand the science behind it the following environment variables should be monitored and controlled (where possible). 
 
@@ -476,9 +494,7 @@ A backend server application will be written in order to provide an application 
 Actual deployment of both the backend server application and the frontend dashboard to the cloud is a task on its own.  Although IaaS services such as AWS make claims of being able to bring services online within minutes, we will need time to learn the toolset and be comfortable that we have a cloud based solution that not only works but is stable and supportable. 
 
 \subsubsection{Testing}
-Testing all parts of the project is paramount to ensure success, 
-% Add image
- hence has been broken up into several sections  See Here for further details. 
+Testing all parts of the project is paramount to ensure success, hence has been broken up into several sections  See the last page of the report for further details. 
 
 Currently, we have a functioning mock-up client device that is able to log temperature results gathered from a functional aquaponics system, which is then able to be accessed from a developer dashboard. The existing client device and dashboard will be tested and refined to better suit the end user, which will occur over the next two weeks, during which the server team will begin the development of secure communication methods and database structures. Following this testing, there are several weeks which will focus on additional server development and replication of the Pi client device.  
 
@@ -610,6 +626,12 @@ Qualifications Required:
 
 % Group Reflection ----
 \part{Group Reflection}
+\newpage
 % ----
+
+\begin{sidewaysfigure}
+\includegraphics[width=1\textwidth]{DiagramC}
+\caption{Gantt Chart for The Project.}
+\end{sidewaysfigure}
 
 \end{document}
